@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Results{% endblock %}
+
+{% block body %}
+    <h2 class="text-center">Results of voting:</h2>
+    <h6 class="text-center">(menus of all restaurants for today)</h6>
+    <br>
+    <div align="center">
+    {% for restaurant in restaurants %}
+        <h3>{{ restaurant.restaurant_name }}</h3>
+            {% for food in restaurant.menu %}
+                <h5>{{ food }}</h5>
+                {% endfor %}
+    {% endfor %}
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    {% if not user.is_authenticated %}
+        <p class="text-center">If you want to vote for menu changes you have to be logged in.</p>
+    {% endif %}
+{% endblock %}

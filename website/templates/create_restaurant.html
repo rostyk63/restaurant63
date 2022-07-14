@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Create Restaurant{% endblock %}
+
+{% block body %}
+    <h1 align="center">Create restaurant with name:</h1>
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                <form method="post">
+                    <textarea name="restaurant" id="restaurant" class="form-control"></textarea>
+                    <div align="center">
+                        <div class="form-group w-50">
+                            <h2 align="center">First food:</h2>
+
+                            <textarea name="first" id="first" class="form-control"></textarea>
+                            <h2 align="center">Second food:</h2>
+                            <textarea name="second" id="second" class="form-control"></textarea>
+                            <h2 align="center">Drink:</h2>
+                            <textarea name="third" id="third" class="form-control"></textarea>
+                            <br>
+                        </div>
+                    </div>
+                    <div align="center">
+                        <button type="submit" class="btn btn-lg btn-primary">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div align="center">
+        <a href="/home">
+            <button type="button" class="btn btn-lg btn-secondary">Back</button>
+        </a>
+    </div>
+{% endblock %}

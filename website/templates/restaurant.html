@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">{{ restaurant.restaurant_name }}</h1>
+    <br>
+    <br>
+    <h3 class="text-center">current day menu:</h3>
+    <br>
+    <h4 class="text-center">First food: {{ menu.first }}</h4>
+    <h4 class="text-center">Second food: {{ menu.second }}</h4>
+    <h4 class="text-center">Drink: {{ menu.third }}</h4>
+    <div align="center">
+        <a href="/restaurant/{{ restaurant.id }}/menu-vote">Vote for changes in today's menu</a>
+    </div>
+    <br>
+    <div align="center">
+        <a href="/home">
+            <button type="button" class="btn btn-lg btn-secondary">Back</button>
+        </a>
+    </div>
+    <br>
+    <div align="center">
+        <a href="/delete-restaurant/{{ restaurant.id }}">
+            <button type="button" class="btn btn-lg btn-danger">Delete Restaurant</button>
+        </a>
+    </div>
+{% endblock %}

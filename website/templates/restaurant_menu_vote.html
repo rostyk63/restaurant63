@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">{{ restaurant.restaurant_name }}</h1>
+    <br>
+    <br>
+    <h3 class="text-center">you can vote for:</h3>
+    <br>
+    <form method="POST">
+        <div align="center">
+            <fieldset id="food1">
+                <h3 class="text-center">First food:</h3>
+                <div>
+                    <input type="radio" value="Buckwheat soup" id="food1_1" name="food1">
+                    <label for="food1_1">Buckwheat soup</label>
+                </div>
+                <div>
+                    <input type="radio" value="Green borsch" id="food1_2" name="food1">
+                    <label for="food1_2">Green borsch</label>
+                </div>
+                <div>
+                    <input type="radio" value="Bograch" id="food1_3" name="food1">
+                    <label for="food1_3">Bograch</label>
+                </div>
+                <div>
+                    <input type="radio" value="Bouillon" id="food1_4" name="food1">
+                    <label for="food1_4">Bouillon</label>
+                </div>
+                 <div>
+                    <input type="radio" value="Solyanka" id="food1_5" name="food1">
+                    <label for="food1_5">Solyanka</label>
+                </div>
+            </fieldset>
+            <fieldset id="food2">
+                <h3 class="text-center">Second food:</h3>
+                <div>
+                    <input type="radio" value="Brown rice" id="food2_1" name="food2">
+                    <label for="food2_1">Brown rice</label>
+                </div>
+                <div>
+                    <input type="radio" value="Buckwheat" id="food2_2" name="food2">
+                    <label for="food2_2">Buckwheat</label>
+                </div>
+                <div>
+                    <input type="radio" value="Caesar" id="food2_3" name="food2">
+                    <label for="food2_3">Caesar</label>
+                </div>
+                <div>
+                    <input type="radio" value="Mashed potatoes" id="food2_4" name="food2">
+                    <label for="food2_4">Mashed potatoes</label>
+                </div>
+                <div>
+                    <input type="radio" value="Spaghetti" id="food2_5" name="food2">
+                    <label for="food2_5">Spaghetti</label>
+                </div>
+            </fieldset>
+            <fieldset id="food3">
+                <h3 class="text-center">Drink:</h3>
+                <div>
+                    <input type="radio" value="Water" id="food3_1" name="food3">
+                    <label for="food3_1">Water</label>
+                </div>
+                <div>
+                    <input type="radio" value="Apple juice" id="food3_2" name="food3">
+                    <label for="food3_2">Apple juice</label>
+                </div>
+                <div>
+                    <input type="radio" value="Compote" id="food3_3" name="food3">
+                    <label for="food3_3">Compote</label>
+                </div>
+                <div>
+                    <input type="radio" value="Orange juice" id="food3_4" name="food3">
+                    <label for="food3_4">Orange juice</label>
+                </div>
+                <div>
+                    <input type="radio" value="Cherry juice" id="food3_5" name="food3">
+                    <label for="food3_5">Cherry juice</label>
+                </div>
+            </fieldset>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <button type="sumbit"
+                    class="btn btn-primary">
+                Vote
+            </button>
+        </div>
+    </form>
+{% endblock %}
